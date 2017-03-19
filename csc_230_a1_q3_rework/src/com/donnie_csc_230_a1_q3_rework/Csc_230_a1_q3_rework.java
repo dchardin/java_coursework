@@ -40,6 +40,7 @@ public class Csc_230_a1_q3_rework {
         
         System.out.printf("%d%s%d%s%d%s%d%s%d%n", splitDigit1, "   ", splitDigit2, "   ", splitDigit3, "   ", splitDigit4, "   ", splitDigit5);
         
+        
     }
     
     
