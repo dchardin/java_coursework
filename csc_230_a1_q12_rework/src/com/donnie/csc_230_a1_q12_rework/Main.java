@@ -47,12 +47,42 @@ public class Main {
             {21, 21, 81, 51, 51},
             {61, 31, 91, 61, 61}};
 
-        if (hSearch(a_horizontal) || vSearch(a_verical) || topDownDiag(a_diagonal) || bottomUpDiag(a_adiagonal)) {
+        
+        
+        
+        if (vSearch(a_verical)) {
             System.out.println("We have a pattren");
         } else {
             System.out.println("We don't have a pattern");
-
         }
+
+        
+        if (hSearch(a_horizontal)) {
+            System.out.println("We have a pattren");
+        } else {
+            System.out.println("We don't have a pattern");
+        }        
+        
+        
+        if (topDownDiag(a_diagonal)) {
+            System.out.println("We have a pattren");
+        } else {
+            System.out.println("We don't have a pattern");
+        }
+
+        if (bottomUpDiag(a_adiagonal)) {
+            System.out.println("We have a pattren");
+        } else {
+            System.out.println("We don't have a pattern");
+        }
+        
+
+/*        if (hSearch(a_horizontal) || vSearch(a_verical) || topDownDiag(a_diagonal) || bottomUpDiag(a_adiagonal)) {
+            System.out.println("We have a pattren");
+        } else {
+            System.out.println("We don't have a pattern");
+        }
+*/
     }
     
 
@@ -112,7 +142,7 @@ public class Main {
 
                 if (x[i][j] == x[i][j + 1] && x[i][j] == x[i][j + 2] && x[i][j] == x[i][j + 3]) {
 
-                    System.out.println("There are four horizontally consecutive values starting at:" + x[i][j]);
+                    System.out.println("There are four horizontally consecutive values.");
 
                     h = true;
 
@@ -129,13 +159,13 @@ public class Main {
 
         boolean v = false;
 
-        for (int i = 0; i < x[0].length - 3; i++) {
+        for (int i = 0; i < x[0].length; i++) {
 
-            for (int j = 0; j < x.length; j++) {
+            for (int j = 0; j < x.length - 3; j++) {
 
                 if (x[i][j] == x[i + 1][j] && x[i][j] == x[i + 2][j] && x[i][j] == x[i + 3][j]) {
 
-                    System.out.println("There are four vertically consecutive values starting at:" + x[i][j]);
+                    System.out.println("There are four vertically consecutive values.");
 
                     v = true;
                 }
@@ -153,7 +183,7 @@ public class Main {
 
         for (int i = 0; i < x.length - 3; i++) {
 
-            for (int j = 0; j < x[0].length; j++) {
+            for (int j = 0; j < x[0].length - 3; j++) {
 
                 if (x[i][j] == x[i + 1][j + 1] && x[i][j] == x[i + 2][j + 2] && x[i][j] == x[i + 3][j + 3]) {
 
@@ -180,7 +210,7 @@ public class Main {
 
                 if (x[i][j] == x[i - 1][j + 1] && x[i][j] == x[i - 2][j + 2] && x[i][j] == x[i - 3][j + 3]) {
 
-                    System.out.println("There are four downwardly diagonal consecutive values starting at:" + x[i][j]);
+                    System.out.println("There are four upwardly diagonal consecutive values.");
 
                     bud = true;
 
