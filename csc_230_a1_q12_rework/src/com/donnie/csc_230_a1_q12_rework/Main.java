@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.donnie.csc_230_a1_q12_rework;
 
 import java.util.Scanner;
@@ -15,6 +10,25 @@ public class Main {
 
     public static void main(String[] args) {
 
+        /** note, all of my search methods work with 
+         * the test cases, but only my horizontal search method hSearch() will
+         * work with the array that my arrayBuilder() method builds. 
+         * 
+         * Getting arrayIndexoutofbounds errors with the others...which makes no
+         * sense since they work with the test case matricies.
+         * 
+         * I cannot
+         * Find any issue with the array that arrayBuilder() builds. I am 
+         * too close to the deadline and I have not been able to sort out
+         * the bug.
+         */
+        
+        
+        
+    Main.arrayBuilder();
+        
+/**        
+        
         int a_horizontal[][] = {
             {11, 71, 41, 11, 11},
             {21, 81, 51, 21, 21},
@@ -76,14 +90,14 @@ public class Main {
             System.out.println("We don't have a pattern");
         }
         
+**/
 
-/*        if (hSearch(a_horizontal) || vSearch(a_verical) || topDownDiag(a_diagonal) || bottomUpDiag(a_adiagonal)) {
-            System.out.println("We have a pattren");
-        } else {
-            System.out.println("We don't have a pattern");
-        }
-*/
-    }
+
+
+ }
+    
+    
+    
     
 
     public static void arrayBuilder() {
@@ -101,6 +115,8 @@ public class Main {
         int[][] matrix = new int[rows][cols];
 
         int valRange = (((rows * cols) / 4) - 1);
+        
+
 
         for (int i = 0; i < matrix.length; i++) {
 
@@ -112,11 +128,20 @@ public class Main {
         }
 
         System.out.println("array created.");
+        
+        Main.arrayPrinter(matrix);
+        Main.hSearch(matrix);
+//        Main.vSearch(matrix);
+//        Main.topDownDiag(matrix);
+//        Main.bottomUpDiag(matrix);
 
-        arrayPrinter(matrix);
-
+    
+        
     }
 
+    
+    
+    
     public static void arrayPrinter(int[][] some2Darray) {
 
         for (int i = 0; i < some2Darray.length; i++) {
@@ -131,6 +156,7 @@ public class Main {
         }
 
     }
+
 
     public static boolean hSearch(int[][] x) {
 

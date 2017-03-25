@@ -103,7 +103,7 @@ public class Csc_230_a1_q4_rework_mainTest {
         int c = 3;
         Csc_230_a1_q4_rework_main instance = new Csc_230_a1_q4_rework_main();        
         int expResult = 6;
-        int result = instance.posSolver(a, b, c);
+        double result = instance.posSolver(a, b, c);
         assertEquals(expResult, result);
     }
     
@@ -135,7 +135,7 @@ public class Csc_230_a1_q4_rework_mainTest {
         int c = 3;
         Csc_230_a1_q4_rework_main instance = new Csc_230_a1_q4_rework_main();        
         int expResult = -4;
-        int result = instance.negSolver(a, b, c);
+        double result = instance.negSolver(a, b, c);
         assertEquals(expResult, result);
     }
 
@@ -157,6 +157,54 @@ public class Csc_230_a1_q4_rework_mainTest {
         Csc_230_a1_q4_rework_main.main(args);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of realChecker method, of class Csc_230_a1_q4_rework_main.
+     */
+    @Test
+    public void testRealChecker() {
+        System.out.println("realChecker");
+        int a = 0;
+        int b = 0;
+        int c = 0;
+        int expResult = 0;
+        int result = Csc_230_a1_q4_rework_main.realChecker(a, b, c);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of posSolver method, of class Csc_230_a1_q4_rework_main.
+     */
+    @Test
+    public void testPosSolver() {
+        System.out.println("posSolver");
+        int a = 0;
+        int b = 0;
+        int c = 0;
+        double expResult = 0.0;
+        double result = Csc_230_a1_q4_rework_main.posSolver(a, b, c);
+        assertEquals(expResult, result, 0.0);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of negSolver method, of class Csc_230_a1_q4_rework_main.
+     */
+    @Test
+    public void testNegSolver() {
+        System.out.println("negSolver");
+        int a = 0;
+        int b = 0;
+        int c = 0;
+        double expResult = 0.0;
+        double result = Csc_230_a1_q4_rework_main.negSolver(a, b, c);
+        assertEquals(expResult, result, 0.0);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
     
 }

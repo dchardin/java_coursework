@@ -1,14 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.donniehardin.csc230_a1_q1_rework;
 
-/**
- *
- * @author donnie
- */
+import java.util.Scanner;
+
 public class Main {
+    
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner (System.in);
+
+        String name = "null";
+
+        System.out.println("Please enter your name: ");
+
+        name = input.next();
+
+        System.out.print(name);
+
+
+    }
+    
     
 }
