@@ -54,4 +54,8 @@ public class Employee
 		this.salary = salary;
 	}
 	
+	public String toString(){
+        return "Employee " + name + " makes this amount per year " + salary;
+    }
+	
 }
